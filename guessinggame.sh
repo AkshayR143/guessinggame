@@ -1,15 +1,15 @@
 
 #!/usr/bin/env bash
 
-echo "[Welcome to Guessing game v0.1]"
+echo "Welcome to Unix Guessing game"
 
-function ask {
-	echo "Please enter the number of files in the current directory:"
+function takefeed {
+	echo "Please enter the num of files in the cur_dir:"
 	read guess
     files=$(ls -1 | wc -l)
 }
 
-ask
+takefeed
 
 while [[ $guess -ne $files ]]
 do
@@ -19,7 +19,7 @@ do
 	else
 		echo "Too high."
 	fi
-	ask
+	takefeed
 done
 
 echo "Well done! It is the correct answer, here is the list of files:"
